@@ -1,3 +1,29 @@
+:root {
+  --bs-primary: #4285F4;  /* Blue */
+  --bs-secondary: #E34133; /* Red */
+  --bs-dark: #212529;
+  --bs-light: #f8f9fa;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--bs-primary);
+  border: none;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--bs-secondary);
+}
+
+.btn-secondary {
+  background: var(--bs-secondary);
+  border: none;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: var(--bs-primary);
+  color: #fff;
+}
 
 /*** Spinner Start ***/
 #spinner {
@@ -70,7 +96,7 @@
 
 .btn-hover-bg:hover {
     background: var(--bs-secondary) !important;
-    color: var(--bs-primary) !important;
+    
 }
 
 .btn-hover-color {
@@ -271,6 +297,47 @@
 
 
 /*** Service Start ***/
+.service-item {
+    transition: all 0.4s ease-in-out;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(66, 133, 244, 0.15); /* light blue shadow */
+    background: linear-gradient(135deg, rgba(227, 65, 51, 0.08), rgba(66, 133, 244, 0.08)); /* light gradient */
+    color: #333;
+}
+
+.service-item img {
+    transition: transform 0.4s ease;
+}
+.service-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.service-item .btn {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid #E34133;
+    color: #E34133;
+    background: transparent;
+    font-weight: 500;
+}
+
+.service-item .btn:hover {
+    background: linear-gradient(135deg, rgba(227, 65, 51, 0.8), rgba(66, 133, 244, 0.8)); /* soft gradient */
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.25); /* light glow */
+}
+
 .service .service-item {
     position: relative;
     overflow: hidden;
@@ -313,6 +380,22 @@
 
 
 /*** Donation Start ***/
+/* Make all donation items equal height */
+.donation-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Ensure inner content stretches equally */
+.donation-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px; /* adjust based on your tallest card */
+}
+
 .donation .donation-item {
     position: relative;
     overflow: hidden;

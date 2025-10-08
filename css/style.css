@@ -53,6 +53,23 @@
     z-index: 99;
 }
 
+/* Service section start  */
+/* Hover effect for Why Choose Us / Feature Cards */
+.feature-card {
+    transition: all 0.3s ease-in-out;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.feature-card i {
+    transition: color 0.3s ease-in-out;
+}
+.feature-card:hover i {
+    color: #0d6efd; /* Bootstrap primary color */
+}
+/* Service section  */
+
 /*** Button Start ***/
 .btn {
     font-weight: 600;
@@ -379,6 +396,53 @@
 /*** Service End ***/
 
 
+/* iot course cards  */
+#iot-projects .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#iot-projects .card-img-top {
+  height: 300px; /* Fixed image height */
+  object-fit: cover;
+}
+
+#iot-projects .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#iot-projects .card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#iot-projects .card p {
+  flex-grow: 1;
+}/* Hover effect for IoT project cards */
+#iot-projects .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#iot-projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#iot-projects .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+#iot-projects .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+
+
 /*** Donation Start ***/
 /* Make all donation items equal height */
 .donation-item {
@@ -541,7 +605,6 @@
     z-index: 1;
 }
 /*** causes End ***/
-
 
 /*** Events Start ***/
 .event .event-carousel.owl-carousel {
@@ -816,3 +879,92 @@
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+/* <!-- WhatsApp Chat Widget Start --> */
+
+  .whatsapp-widget {
+    position: fixed;
+    bottom: 100px; /* moved up a bit */
+    right: 30px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Floating Button */
+  .whatsapp-button {
+    background-color: #25d366;
+    width: 50px;   /* bigger */
+    height: 50px;  /* bigger */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+    background-color: #20b358;
+  }
+  .whatsapp-button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Chat Box */
+  .whatsapp-box {
+    display: none;
+    position: absolute;
+    bottom: 90px; /* adjusted for bigger button */
+    right: 0;
+    width: 320px; /* slightly bigger */
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    overflow: hidden;
+  }
+
+  .whatsapp-header {
+    background: #0a5f54;
+    color: white;
+    padding: 18px;
+  }
+  .whatsapp-header h5 {
+    margin: 0;
+    font-size: 18px; /* bigger */
+    color: white;
+  }
+  .whatsapp-header small {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+
+  .whatsapp-body {
+    padding: 18px;
+    font-size: 15px;
+    color: #333;
+    background: #f9f9f9;
+  }
+
+  .whatsapp-body p {
+    margin: 0 0 12px;
+  }
+
+  .whatsapp-footer {
+    text-align: center;
+    padding: 12px;
+  }
+
+  .whatsapp-footer a {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .whatsapp-footer a:hover {
+    background: #20b358;
+  }

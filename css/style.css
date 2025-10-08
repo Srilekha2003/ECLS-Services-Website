@@ -605,6 +605,25 @@
     z-index: 1;
 }
 /*** causes End ***/
+/* Training sec start  */
+#training-overview .training-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+}
+
+#training-overview .training-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#training-overview .training-card img {
+    transition: transform 0.5s ease;
+}
+
+#training-overview .training-card:hover img {
+    transform: scale(1.05);
+}
+/* end  */
 
 /*** Events Start ***/
 .event .event-carousel.owl-carousel {
